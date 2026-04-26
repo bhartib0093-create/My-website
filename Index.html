@@ -1,0 +1,145 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Blog</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f5f5f5;
+  transition: 0.3s;
+}
+
+/* Dark Mode */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  background: #111;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  color: white;
+}
+
+/* Blog Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 30px;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.dark .card {
+  background: #1e1e1e;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>MyBlog</h2>
+  <button onclick="toggleDark()">🌙 Dark Mode</button>
+</nav>
+
+<section class="hero">
+  <h1>Welcome to Pro Blog</h1>
+  <p>Trending Dialogue & Viral Content Ideas 🚀</p>
+</section>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://picsum.photos/300/200?1">
+    <div class="card-content">
+      <h3>🔥 Viral Hook Idea</h3>
+      <p>Start video with shocking line.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300/200?2">
+    <div class="card-content">
+      <h3>🎬 Reel Strategy</h3>
+      <p>Use trending sound + emotion.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/300/200?3">
+    <div class="card-content">
+      <h3>💡 Growth Hack</h3>
+      <p>Reply to comments with video.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 MyBlog</p>
+</footer>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
